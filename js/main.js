@@ -36,3 +36,25 @@ var n2 = 5*3
 var n3 = 5*5
 var mediafinal = (n1+n2+n3)/10
 console.log(mediafinal)
+
+
+// resposta = confirm("me de bom dia")
+
+// if (resposta){
+//     alert("voce me deu bom dia")
+// }
+// else{
+//     alert("vc nao tem escolha, me de bom dia")
+// }
+
+msgm = prompt("Voce vai meda bom dia?")
+
+if (msgm=="sim"){
+
+    alert("Obrigado, bom dia pra vc tbm")
+}
+
+if (msgm=="não"){
+
+    alert("vai fica sem bom dia tambem seu otario")
+}

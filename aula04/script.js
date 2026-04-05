@@ -1,134 +1,191 @@
-let num =  Number(prompt("par ou impar? Digite um número: "));
-if (isNaN(num)) {
-    alert("Pô o número aí não é numero")
+// 1. Par ou Ímpar
+let numero1 = Number(prompt("Digite um número:"));
+
+if (numero1 % 2 === 0) {
+  alert("O número é par.");
+} else {
+  alert("O número é ímpar.");
+
 }
-else if (num % 2 == 0) {
-    alert("Pô o número aí é par")
-} 
-else
-alert("Pô o número aí é ímpar");
 
+// 2. Verificação de Maioridade
+let idade = Number(prompt("Digite sua idade:"));
 
-alert("Exercicio 2");
-let idade = Number(prompt("Digite sua idade: "));
-if (idade < 18)
-    alert("Menor de idade")
-else
-    alert("Maior de idade")
+if (idade >= 18) {
+  alert("Você é maior de idade.");
+} else {
+  alert("Você é menor de idade.");
+}
 
-    alert("Exercício 3")
+// 3. Contagem de 1 a 10
 for (let i = 1; i <= 10; i++) {
-    alert(i)
+  console.log(i);
 }
 
+// 4. Contagem Regressiva
+let numero2 = Number(prompt("Digite um número para a contagem regressiva:"));
 
-alert ("exercicio 4")
-num = Number(prompt("Contagem regressiva a partir de: "))
-while (num !=-1) {
-    alert(num)
-    num--;
+while (numero2 >= 0) {
+  console.log(numero2);
+  numero2--;
 }
 
+// 5. Tabuada
+let numero3 = Number(prompt("Digite um número para ver a tabuada:"));
 
-alert ("exercício 5")
-num = Number(prompt("tabuada do numero: "));
-for (let i = 0; i < 11; i++) {
-    alert(num + " * " + i + " = " + i*num)
-} 
-
-
-alert ("exercício 6")
-num = Number(prompt("somatória do numero: "));
-for (let i = 0; i <= num; i++) {
-    alert(num + " + " + i + " = " + (i+num));
+for (let i = 1; i <= 10; i++) {
+  console.log(numero3 + " x " + i + " = " + (numero3 * i));
 }
 
+// 6. Somatório
+let numero4 = Number(prompt("Digite um número:"));
+let soma = 0;
 
-alert("Exercício 7")
-let numerop = prompt("Digite um número:");
+for (let i = 1; i <= numero4; i++) {
+  soma += i;
+}
+
+alert("A soma de 1 até " + numero4 + " é " + soma);
+
+// 7. Número Primo
+let numero5 = Number(prompt("Digite um número:"));
 let primo = true;
 
-for (let i = 2; i < numerop; i++) {
-  if (numerop % i == 0) {
-    primo = false;
+if (numero5 <= 1) {
+  primo = false;
+} else {
+  for (let i = 2; i < numero5; i++) {
+    if (numero5 % i === 0) {
+      primo = false;
+      break;
+    }
   }
 }
 
 if (primo) {
-  alert("O número é primo");
+  alert("O número é primo.");
 } else {
-  alert("O número não é primo");
+  alert("O número não é primo.");
 }
 
+// 8. Login Simples
+let usuarioCorreto = "admin";
+let senhaCorreta = "1234";
 
-alert("Exercício 8")
-let usuario = prompt("nome do usuário: ")
-let senha = prompt("senha: ")
+let usuario = prompt("Digite o usuário:");
+let senha = prompt("Digite a senha:");
 
-while (usuario != "Matheus" || senha != "1211") {
-
-    if (usuario != "Matheus") {
-        alert("Usuário errado")
-    }
-
-    if (senha != "1211") {
-        alert("Senha errada")
-    }
-
-    usuario = prompt("Digite o nome do usuário denovo:")
-    senha = prompt("Digite a senha dnv:")
+while (usuario !== usuarioCorreto || senha !== senhaCorreta) {
+  alert("Usuário ou senha incorretos. Tente novamente.");
+  usuario = prompt("Digite o usuário:");
+  senha = prompt("Digite a senha:");
 }
-alert("Login deu certo")
 
-//9. Soma de Números Positivos
+alert("Login realizado com sucesso!");
 
-alert("Exercício 10")
-let numeroa = Math.floor(Math.random() * 10) + 1
-let palpite = prompt("Adivinhe o número de 1 a 10")
+// 9. Soma de Números Positivos
+let total = 0;
+let numero6 = Number(prompt("Digite um número positivo (negativo para parar):"));
 
-while(palpite != numeroa){
-
-    if(palpite > numeroa){
-        alert("O número e menor")
-    }
-
-    if(palpite < numeroa){
-        alert("O número e maior")
-    }
-
-    palpite = prompt("Tente novamente")
+while (numero6 >= 0) {
+  total += numero6;
+  numero6 = Number(prompt("Digite outro número positivo (negativo para parar):"));
 }
-alert("Você acertou")
 
+alert("A soma total é " + total);
 
-alert("Exercício 11")
-let numfa = prompt("Fatorial do numero: ")
-let fatorial = 1
+// 10. Adivinhação
+let secreto = Math.floor(Math.random() * 10) + 1;
+let palpite = Number(prompt("Adivinhe o número de 1 a 10:"));
 
-for(let i = 1 ; i <= numfa; i++){ 
-    fatorial = fatorial * i
+while (palpite !== secreto) {
+  if (palpite < secreto) {
+    alert("O número secreto é maior.");
+  } else {
+    alert("O número secreto é menor.");
+  }
+
+  palpite = Number(prompt("Tente novamente:"));
 }
-alert("O fatorial é:" + fatorial) 
 
-// 12- Validação de Nota
+alert("Parabéns! Você acertou.");
+
+// 11. Cálculo de Fatorial
+let numero7 = Number(prompt("Digite um número:"));
+let fatorial = 1;
+
+for (let i = 1; i <= numero7; i++) {
+  fatorial *= i;
+}
+
+alert("O fatorial de " + numero7 + " é " + fatorial);
+
+// 12. Validação de Nota
+let nota = Number(prompt("Digite uma nota de 0 a 10:"));
+
+while (nota < 0 || nota > 10) {
+  alert("Nota inválida. Digite novamente.");
+  nota = Number(prompt("Digite uma nota de 0 a 10:"));
+}
+
+alert("Nota válida: " + nota);
 
 
 
+// 13. Média de Notas
+let nota1 = Number(prompt("Digite a primeira nota:"));
+let nota2 = Number(prompt("Digite a segunda nota:"));
+let nota3 = Number(prompt("Digite a terceira nota:"));
 
+let media = (nota1 + nota2 + nota3) / 3;
 
+alert("Média: " + media);
 
-alert("Exercício 13")
-alert("Digite suas notas")
-let nota1 = Number(prompt ("Digite a primeira nota:"))
-let nota2 = Number(prompt ("Digite a segunda nota:"))
-let nota3 = Number(prompt ("Digite a terceira nota:"))
+if (media >= 7) {
+  alert("Aprovado!");
+} else {
+  alert("Reprovado!");
+}
 
-let somam = (nota1 + nota2 + nota3) 
-let media1 = somam / 3
-alert("A sua média é: "+media1)
+// 14. Caixa Eletrônico
+let valor = Number(prompt("Digite o valor do saque:"));
 
-if(media1 >= 7){
-    alert("Você foi aprovado")
-}else{
-    alert("Você foi reprovado")
+let ced100 = Math.floor(valor / 100);
+valor %= 100;
+
+let ced50 = Math.floor(valor / 50);
+valor %= 50;
+
+let ced20 = Math.floor(valor / 20);
+valor %= 20;
+
+let ced10 = Math.floor(valor / 10);
+valor %= 10;
+
+let ced5 = Math.floor(valor / 5);
+valor %= 5;
+
+let ced2 = Math.floor(valor / 2);
+valor %= 2;
+
+let ced1 = Math.floor(valor / 1);
+
+alert(
+  "Cédulas:\n" +
+  "100: " + ced100 + "\n" +
+  "50: " + ced50 + "\n" +
+  "20: " + ced20 + "\n" +
+  "10: " + ced10 + "\n" +
+  "5: " + ced5 + "\n" +
+  "2: " + ced2 + "\n" +
+  "1: " + ced1
+);
+
+// 15. Números Ímpares
+let numero8 = Number(prompt("Digite um número:"));
+
+for (let i = 1; i <= numero8; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
 }

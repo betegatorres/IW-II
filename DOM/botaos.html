@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Minha página</h1>
+        <p id="texto">Texto não alterado</p>
+        <p id="contador"></p>
+        <button onclick="mudarTexto()">Mudar texto</button>
+        <button onclick="mudarCor()">Mudar Cor do fundo</button>
+        <button onclick="contador()">Contar clicks</button>
+        <a href="index.html"><button>Voltar</button></a>
+    </div>
+    <script>
+        let i = 0; let num = 0;
+        function mudarCor() {
+            if (i ==1 ) {
+                cor = "cyan";
+            }
+            else if (i ==2) {
+                cor = "orange";
+            }
+            else  if (i ==3){
+                cor = "red";
+            }
+            else  if (i ==4){
+                cor = "blue";
+            }
+            else if (i ==5){
+                cor = "yellow";
+            }
+            else if (i ==6){
+                cor = "purple";
+            }
+            else {
+                cor = "pink";
+            }
+            document.body.style.backgroundColor = cor;
+            if (i == 7) {
+                i = 0;
+            }else
+            i++;
+        }
+        function mudarTexto() {
+            document.getElementById("texto").innerText = "Texto alterado!";
+        }
+        function contador() {
+            document.getElementById("contador").innerText = "Contador: " + num;
+            num++;
+        }
+    </script>
+
+
+</body>
+
+</html>

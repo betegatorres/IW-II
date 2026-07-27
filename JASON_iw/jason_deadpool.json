@@ -1,0 +1,40 @@
+{
+  "personagem": 
+  {
+    "nome": "Deadpool",
+    "franquia": "X-Men",
+    "origem": "Projeto Arma X",
+    "primeira_aparicao": "New Mutants #98 (1991) - como vilão",
+    "perfil_fisico": {
+      "altura": "Aprox. 1,88 m",
+      "porte_fisico": " Atlético, magro",
+      "marca_registrada": "humor ácido",
+      "item_alternativo": "Duas katanas (formando um X)"
+    }
+    ,
+    "atributos_sobrehumanos": 
+    {
+
+      "força": "Extrema (Consegue levantar cerca de 360 kg)",
+      "durabilidade": "indestrutível",
+      "regeneracao": "Fator de cura imediato",
+      "imortalidade": "Ressurreição constante"
+    },
+    "combate": {
+      "arma_favorita": "katanas",
+      "estilo": "Guerra Psicológica (irritação principalmente) ,Distração e Ausência de Autopreservação",
+      "fraqueza_notavel": "Dependência do câncer"
+    },
+    "psicologia": {
+      "motivacao": " A Busca por Conexão",
+      "estado_mental": "Psicose e Fragmentação",
+      "gatilho_sonoro": "O Som de Clones do Madman"
+    },
+    "variantes": [
+      "Lady Deadpool (Wanda Wilson)",
+      "Kidpool",
+      "Venompool (Versão infantil da Terra-10330)",
+      "Headpool (universo Marvel Zumbis)"
+    ]
+  }
+}
